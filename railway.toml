@@ -1,9 +1,13 @@
 [build] 
 builder = "NIXPACKS" 
+buildCommand = "chmod +x mvnw && ./mvnw clean package -DskipTests" 
  
 [nixpacks] 
-packages = ["openjdk-21"] 
+packages = ["openjdk-21", "maven"] 
  
 [variables] 
 JAVA_HOME = "/usr/lib/jvm/java-21-openjdk" 
 JAVA_VERSION = "21" 
+ 
+[start] 
+cmd = "java -jar target/*.jar" 
