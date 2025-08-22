@@ -1,0 +1,9 @@
+[build] 
+builder = "NIXPACKS" 
+ 
+[nixpacks] 
+packages = ["openjdk-21"] 
+ 
+[variables] 
+JAVA_HOME = "/usr/lib/jvm/java-21-openjdk" 
+JAVA_VERSION = "21" 
